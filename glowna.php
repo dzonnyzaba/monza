@@ -35,14 +35,13 @@ class Glowna{
     <link rel="stylesheet" type="text/css" href="css/stylee.css" />
     <link rel="stylesheet" type="text/css" href="css/fontello/css/fontello.css" />
     <link href='https://fonts.googleapis.com/css?family=Vidaloka' rel='stylesheet' type='text/css' />
-    <script type="text/javascript" src="js/timer.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <?php
     }
     
     public function wyswietlExplorer() {
         echo '<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>'."\n";
+        echo '<meta name="viewport" content="width=device-width, initial-scale=1">'."\n";
     }
     
     public function wyswietlJS() {
@@ -74,7 +73,7 @@ class Glowna{
     
     public function wyswietlNaglowek(){
         ?>
-        <div id="czapka">
+                <div id="czapka">
 			<div id="czas">
 				<div id="kalendarz">
 					NASTĘPNE GRAND PRIX NA MONZY ZACZNIE SIĘ ZA...
@@ -109,14 +108,88 @@ class Glowna{
 		</div>
     <?php
     }
+    
+    public function wyswietlNawigacje(){
+?>
+        <div id="lewe">
+            <ul>
+		<li><a href="monza-home">Home</a></li>
+		<li><a href="o-torze-monza">O torze</a></li>
+		<li><a href="uklad-toru">Układ toru</a></li>
+                <li><a href="historia-toru-monza">Historia</a></li>
+		<li><a href="galeria-foto">Galeria</a></li>
+		<li><a href="dojazd-do-toru">Dojazd</a></li>
+            </ul>
+	</div>
+<?php
+    }
+    
+    public function wyswietlMain() {
+?>
+    <div id="centrum">
+	<p>Monza to niewielkie miasto i gmina w północnych Włoszech, 
+            w regionie Lombardia, w prowincji Monza i Brianza. 
+            Potocznie nazwą tą określa się również tor wyścigowy 
+            leżący nieopodal tego miasta. Niniejsza strona poświęcona 
+            jest właśnie temu obiektowi, który od niemal stu lat zajmuje 
+            jedno z ważniejszych miejsc w kalendarzu fana sportów motorowych...</p>
+    </div>
+<?php
+    }
         
+        public function wyswietlAside() {
+?>
+	<div id="prawe">
+            <p>
+		TO<br>
+		MIEJSCE<br>
+		CZEKA<br>
+		NA<br>
+		TWOJĄ<br>
+		REKLAMĘ
+            </p>
+	</div>
+	<div class="czysc"></div>
+<?php
+    }
     
     
     public function wyswietlContent() {
-
-        
+        echo '<div id="brzuch">';
+        $this->wyswietlNawigacje();
+        $this->wyswietlMain();
+        $this->wyswietlAside();
+        echo "</div>";
     }
     
+    public function wyswietlStopke() {
+?>      
+        <div id="nogi">Copyright &copy; Strona w sieci od 2015r. Janusz Pałubski.
+		 Wszelkie prawa zastrzeżone</div>
+	
+<!--	<div id="kukiz">
+		<div id="kukiz2">
+		<div id="ciacha">Ta strona używa ciasteczek. Jeżeli zgadzasz sie na to - to klikaj OK.</div>
+		<div id="ok">OK</div>
+		</div>
+	</div>-->
+        <script type="text/javascript" src="js/timer.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<?php
+        }
+    
+        public function wyswietl() {
+            echo "<!DOCTYPE html>\n";
+            echo "<html lang=\"pl\">\n";
+            echo "<head>\n";
+            $this->wyswietlHead();
+            echo "</head>\n<body>\n";
+            $this->wyswietlNaglowek();
+            $this->wyswietlContent();
+            $this->wyswietlStopke();
+            echo "</body>\n</html>";
+        }
     
 }
 

@@ -13,5 +13,4 @@ $zawartosc = "Monza to niewielkie miasto i gmina w północnych Włoszech, "
 
 $glowna = new Glowna($zawartosc);
 
-$glowna->wyswietlHead();
-$glowna->wyswietlNaglowek();
+$glowna->wyswietl();
