@@ -32,11 +32,12 @@ class Glowna{
     
     public function wyswietlLinki() {
 ?>
-    <link rel="stylesheet" type="text/css" href="css/stylee.css" />
+    
     <link rel="stylesheet" type="text/css" href="css/fontello/css/fontello.css" />
     <link href='https://fonts.googleapis.com/css?family=Vidaloka' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-<?php
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/stylee.css" />
+        <?php
     }
     
     public function wyswietlExplorer() {
@@ -68,7 +69,7 @@ class Glowna{
         $this->wyswietlOpis();
         $this->wyswietlExplorer();
         $this->wyswietlLinki();
-        $this->wyswietlJS();
+
     }
     
     public function wyswietlNaglowek(){
@@ -167,15 +168,16 @@ class Glowna{
         <div id="nogi">Copyright &copy; Strona w sieci od 2015r. Janusz Pałubski.
 		 Wszelkie prawa zastrzeżone</div>
 	
-<!--	<div id="kukiz">
+	<div id="kukiz">
 		<div id="kukiz2">
 		<div id="ciacha">Ta strona używa ciasteczek. Jeżeli zgadzasz sie na to - to klikaj OK.</div>
 		<div id="ok">OK</div>
 		</div>
-	</div>-->
+	</div>
+        <script src="js/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="js/timer.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <script src="bootstrap/js/bootstrap.min.js" ></script>
+        
 <?php
         }
     
@@ -185,9 +187,12 @@ class Glowna{
             echo "<head>\n";
             $this->wyswietlHead();
             echo "</head>\n<body>\n";
+            echo "<div id=\"pojemnik\">\n";
             $this->wyswietlNaglowek();
             $this->wyswietlContent();
             $this->wyswietlStopke();
+            $this->wyswietlJS();
+            echo "</div>";
             echo "</body>\n</html>";
         }
     

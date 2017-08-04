@@ -216,7 +216,7 @@ li a:hover{
 	height: 720px;
 	padding: 25px;
 	background-color: black;
-	background-image: url(flaga.jpg);
+	background-image: url(../images/flaga.jpg);
 	background-repeat: repeat-y;
 	background-position: right;
 	color: white;
