@@ -1,8 +1,9 @@
 
 body{
-background: url(../images/1965para-kopia.jpg);
+background-image: url(../images/1965para-kopia.jpg);
+background-position: center;
 background-repeat: no-repeat;
-background-size: 100% 100%;
+background-size: cover;
 margin: 0;
 padding: 0;
 }
@@ -46,10 +47,12 @@ padding: 0;
 }
 
 .soc{
-	width: 85px;
+/* 	width: 85px;
 	height: 80px;
-	margin: 10px 5px;
+	margin: 10px 5px; */
 	color: white;
+	margin: 0;
+	padding: 0;
 }
 
 .soc a{
@@ -64,37 +67,29 @@ padding: 0;
 	color: #d40000;
 }
 
-#fb{
+/* #fb{
 	float: left;
 }
 
-#fb:hover{
-	background: #666666;
-}
+
 
 #yt{
 	float: left;
 }
 
-#yt:hover{
-	background: #666666;
-}
+
 
 #tw{
 	float: left;
 }
 
-#tw:hover{
-	background: #666666;
-}
+
 
 #inst{
 	float: left;
-}
+} */
 
-#inst:hover{
-	background: #666666;
-}
+
 
 #pojemnik{
 	width: 1000px;
@@ -137,16 +132,17 @@ padding: 0;
 	cursor: pointer;
 }
 
-#glowa{
-	min-height: 210px;
+.monza-baner{
+	
 	margin-bottom: 15px;
 	background: #d40000;
 	opacity: 0.8;
+	width: 100%;
 }
 
-#logo img{
-	margin-top: 6px;
-	margin-left: 6px;
+.monza-baner img{
+	width: 100%;
+	height: auto;
 }
 
 #logo{
