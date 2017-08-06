@@ -172,21 +172,35 @@ padding: 0;
 }
 #brzuch{
 	width: 100%;
-	margin: 0;
+	margin: 15px;
 	padding: 0;
-	
+	height: 800px;
 }
 
-#lewe{
-	float: left;
+.row.brzuch{
+	overflow: hidden;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.equal1{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;	
+}
+
+.lewe{
+/* 	float: left;
 	width: 150px;
-	height: 800px;
+	height: 100%;
+	background: black;
+	opacity: 0.8;
+	color: white; */
 	background: black;
 	opacity: 0.8;
 	color: white;
 }
 
-#lewe ul{
+nav ul{
 	list-style-type: none;
 	line-height: 2.5em;
 	width: 100%;
@@ -204,12 +218,14 @@ li a{
 
 li a:hover{
 	background: #d40000;
+	text-decoration: none;
+	color: white;
 }
 
-#centrum{
-	float: left;
+.centrum{
+/* 	float: left;
 	width: 620px;
-	height: 720px;
+	height: 100%;
 	padding: 25px;
 	background-color: black;
 	background-image: url(../images/flaga.jpg);
@@ -219,38 +235,46 @@ li a:hover{
 	font-family: Times new Roman;
 	padding: 40px;
 	font-size:35px;
+	text-align: justify; */
+	
+	background-color: black;
+	color: white;
+	font-family: Times new Roman;
+	
+	font-size:35px;
 	text-align: justify;
 }
 
-#centrum p{
+.centrum p{
 	margin-top: 0px;
 	text-indent: 2em;
 }
 
 
-#prawe{
-	float: right;
+.prawe{
+/* 	float: right;
 	width: 150px;
-	height: 800px;
+	height: 100%; */
 	background: black;
 }
 
-#prawe p{
-	color: white;
+.prawe p{
+/* 	color: white;
 	text-align: center;
 	font-weight: bold;
 	line-height: 4em;
 	font-size: 25px;
-	padding-top: 50px;
+	padding-top: 50px; */
 }
 
-#nogi{
+footer{
 	min-height: 40px;
 	background: pink;
 	text-align: center;
 	padding-top: 15px;
 	background: #d40000;
 	margin-top: 15px;
+	width: 100%;
 }
 
 #kukiz{
